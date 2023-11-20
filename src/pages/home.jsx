@@ -8,6 +8,7 @@ function Home() {
       <h1> {title} <b style = {style}>{autor}</b> 
       </h1>
     </main>
+    // hrhfruiuirui
   );
 }
 
