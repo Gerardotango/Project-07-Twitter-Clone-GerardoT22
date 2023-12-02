@@ -16,22 +16,29 @@ export default Herosection2;
 
 // le premier container 9
 function Tweet_one() {
+
   return (
     <div className="tweet">
       <div className="tweet-avatar">
-        <Logo logo="src/images/cnn.png" />
+        <Logo logo="src/images/cnn.svg" />
 
       </div>
 
-      <div className="tweet-body">
-        <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@kajibwami . 7m" />
+      <div className="tweet-content">
+        <div className="tweet-body">
+          <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
 
-        <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores, ad deleniti consectetur quas." />
-        <Tweet_Actions />
+          <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores , ad deleniti consectetur quas. " />
+
+        </div>
+        {/* <div className="tweet-actions">
+           <Tweet_Actions/>
+           </div> */}
       </div>
 
     </div>
   )
+
 }
 
 // le deuxième  container 9
@@ -54,12 +61,18 @@ function Tweet_Three() {
 
       </div>
 
-      <div className="tweet-body">
-        <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
+      <div className="tweet-content">
+        <div className="tweet-body">
+          <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
 
-        <Ecrit write="BIG NEWS lol jk still Twitter " />
-        <Tweet_Actions />
+          <Ecrit write="BIG NEWS lol jk still Twitter " />
+
+        </div>
+        <div className="tweet-actions">
+          <Tweet_Actions />
+        </div>
       </div>
+
     </div>
   )
 }
@@ -71,17 +84,24 @@ function Tweet_Four() {
 
       <div className="tweet-avatar">
         <Logo logo="src/images/twitter.svg" />
-
       </div>
 
-      <div className="tweet-body">
-        <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
 
-        <Ecrit write="BIG NEWS lol jk still Twitter " />
-        <Tweet_Actions />
+      <div className="tweet-content">
+        <div className="tweet-body">
+          <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
+
+          <Ecrit write="BIG NEWS lol jk still Twitter " />
+
+        </div>
+        <div className="tweet-actions">
+          <Tweet_Actions />
+        </div>
       </div>
+
     </div>
   )
+
 }
 
 // cinquième  container 9
@@ -94,14 +114,21 @@ function Tweet_Five() {
 
       </div>
 
-      <div className="tweet-body">
-        <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
+      <div className="tweet-content">
+        <div className="tweet-body">
+          <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
 
-        <Ecrit write="BIG NEWS lol jk still Twitter " />
-        <Tweet_Actions />
+          <Ecrit write="BIG NEWS lol jk still Twitter " />
+
+        </div>
+        <div className="tweet-actions">
+          <Tweet_Actions />
+        </div>
       </div>
+
     </div>
   )
+
 }
 
 
@@ -128,11 +155,12 @@ function Tweet_Content() {
 }
 // container 12 in 11
 function Tweet_body() {
+
   return (
     <div className="tweet-body">
       <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@kajibwami . 2h" />
       <Tweet_title text="" />
-      <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium, ad deleniti consectetur quas." />
+      <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores , ad deleniti consectetur quas." />
       <Tweet_Image />
     </div>
   )
@@ -142,11 +170,12 @@ function Tweet_Actions() {
   return (
     <div className="tweet-actions">
       <Action picone="src/images/Reply.svg" written="19" />
-      <Action picone="src/images/Reply.svg" written="48" />
-      <Action picone="src/images/Reply.svg" written="482" />
+      <Action picone="src/images/Retweet.svg" written="48" />
+      <Action picone="src/images/like.svg" written="482" />
       <Action picone="src/images/Downlord.svg" />
     </div>
   )
+
 }
 
 
@@ -169,11 +198,13 @@ function Tweet_title({ titre, icone, details, text }) {
 
 // container 16
 function Tweet_Image() {
+
   return (
     <div className="tweet-image">
-      <BigImage img="src/images/imagetweet.png" />
+      <BigImage img="src/images/tweet-image.png" />
     </div>
   )
+
 }
 
 // les contenues
@@ -198,6 +229,7 @@ function Action({ picone, written }) {
       <p> {written} </p>
     </div>
   )
+
 }
 
 function BigImage({ img }) {

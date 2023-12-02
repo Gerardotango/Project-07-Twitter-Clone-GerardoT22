@@ -7,14 +7,14 @@ function Home() {
   return (
     <main className="timeline">
 
-      <Header />
-      <HeroSection />
-      <Herosection2 />
-
-
-
+    <Header/>
+     <HeroSection/>
+     <Herosection2/>
+    
+     
 
     </main>
+
 
   );
 }

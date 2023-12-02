@@ -5,9 +5,9 @@ import React from "react";
 function Pagetitle({text}) {
    
    return (
-    <div className="page-title">
-         <h1>{text}</h1>  
-    </div>
+    
+         <h1 className="page-title">{text}</h1>  
+    
    )
    
 }
