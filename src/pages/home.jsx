@@ -1,14 +1,19 @@
 import React from 'react';
-const title = 'Hello gerardo';
-const  autor = 'Tango';
-const style = {color : 'yellow'}
+import Header from '../components/header';
+import HeroSection from '../components/herosection';
+import Herosection2 from '../components/herosection2';
+
 function Home() {
   return (
     <main className="timeline">
-      <h1> {title} <b style = {style}>{autor}</b> 
-      </h1>
+    <Header/>
+     <HeroSection/>
+     <Herosection2/>
+    
+     
+
     </main>
-    // hrhfruiuirui
+    
   );
 }
 

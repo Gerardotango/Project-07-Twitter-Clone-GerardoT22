@@ -23,11 +23,16 @@ function Tweet_one() {
          
        </div>
 
-         <div className="tweet-body">
-         <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@kajibwami . 7m" />
+       <div className="tweet-content">
+            <div className="tweet-body">
+         <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
          
-           <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores quae amet ut accusamus repudiandae pariatur delectus iste, ad deleniti consectetur quas." />
+           <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores , ad deleniti consectetur quas. " />
+           
+           </div>
+           <div className="tweet-actions">
            <Tweet_Actions/>
+           </div>
          </div>
         
        </div>
@@ -54,12 +59,18 @@ function Tweet_Three() {
          
        </div>
 
+       <div className="tweet-content">
             <div className="tweet-body">
          <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
          
            <Ecrit write="BIG NEWS lol jk still Twitter " />
+           
+           </div>
+           <div className="tweet-actions">
            <Tweet_Actions/>
+           </div>
          </div>
+
         </div>
     )
 }
@@ -74,12 +85,18 @@ function Tweet_Four() {
          
        </div>
 
+       <div className="tweet-content">
             <div className="tweet-body">
          <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
          
            <Ecrit write="BIG NEWS lol jk still Twitter " />
+           
+           </div>
+           <div className="tweet-actions">
            <Tweet_Actions/>
+           </div>
          </div>
+
         </div>
     )
 }
@@ -93,13 +110,18 @@ function Tweet_Five() {
         <Logo logo="src/images/twitter.svg" />
          
        </div>
-
+              <div className="tweet-content">
             <div className="tweet-body">
          <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@Twitter . Oct 29" />
          
            <Ecrit write="BIG NEWS lol jk still Twitter " />
+           
+           </div>
+           <div className="tweet-actions">
            <Tweet_Actions/>
+           </div>
          </div>
+         
         </div>
     )
 }
@@ -132,8 +154,8 @@ function Tweet_body() {
         <div className="tweet-body">
         <Tweet_title titre="The New York Times" icone="src/images/Group.svg" details="@kajibwami . 2h" />
         <Tweet_title text="" />
-        <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores quae amet ut accusamus repudiandae pariatur delectus iste, ad deleniti consectetur quas." />
-        <Tweet_Image/>            
+        <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores , ad deleniti consectetur quas." />
+         <Tweet_Image/>             
         </div>
     )
 }
@@ -142,8 +164,8 @@ function Tweet_Actions() {
     return (
         <div className="tweet-actions">
             <Action picone="src/images/Reply.svg" written="19" />
-            <Action picone="src/images/Reply.svg" written="48" />
-            <Action picone="src/images/Reply.svg" written="482" />
+            <Action picone="src/images/Retweet.svg" written="48" />
+            <Action picone="src/images/like.svg" written="482" />
             <Action picone="src/images/Downlord.svg" />
         </div>
     )
@@ -194,7 +216,7 @@ function Ecrit({write}) {
 function Action({picone , written}) {
     return (
         <div className="tweet-action">
-            <img className="tweet-actions svg" src={picone} alt="" />
+            <img className="tweet-action svg" src={picone} alt="" />
             <p> {written} </p>
         </div>
     )
