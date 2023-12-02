@@ -19,7 +19,7 @@ function Tweet_one() {
     return (
        <div className="tweet">
         <div className="tweet-avatar">
-        <Logo logo="src/images/cnn.png" />
+        <Logo logo="src/images/cnn.svg" />
          
        </div>
 
@@ -30,9 +30,9 @@ function Tweet_one() {
            <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores , ad deleniti consectetur quas. " />
            
            </div>
-           <div className="tweet-actions">
+           {/* <div className="tweet-actions">
            <Tweet_Actions/>
-           </div>
+           </div> */}
          </div>
         
        </div>
@@ -193,7 +193,7 @@ function Tweet_title({ titre , icone , details , text}) {
 function Tweet_Image() {
     return (
         <div className="tweet-image">
-           <BigImage img="src/images/imagetweet.png" />
+           <BigImage img="src/images/tweet-image.png" />
         </div>
     )
 }
