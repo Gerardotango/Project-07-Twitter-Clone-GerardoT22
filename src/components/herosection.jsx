@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./ButtonBlue";
 
 
 
@@ -48,7 +49,7 @@ function TweetEditbuttons() {
     return (
         <div className="tweet-editor-buttons">
              <ActionTweet/>
-             <Button/>
+             <Button style="button"/>
         </div>
 
     )
@@ -77,13 +78,13 @@ function TweetEditActions({img}) {
 
 // create button element for containeur 21
 
-function Button({childreen}) {
-    return (
-        <button className="button">
-            twitter
-        </button>
+// function Button({childreen}) {
+//     return (
+//         <button className="button">
+//             twitter
+//         </button>
     
-    )
-}
+//     )
+// }
 
 

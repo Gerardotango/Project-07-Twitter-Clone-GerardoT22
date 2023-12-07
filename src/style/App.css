@@ -15,10 +15,11 @@ body{
 }
 
 .timeline {
-    flex: 0 0 800px;
+    flex: 0 0 600px;
     font-family: 'Inter', sans-serif;
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
+    margin-left: 90px;
 }
 
 .header {
@@ -192,4 +193,242 @@ body{
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.time {
+    flex: 0 0 800px;
+    font-family: 'Inter', sans-serif;
+    /* border-left: 1px solid #2F3336;
+    border-right: 1px solid #2F3336; */
+    position: fixed;
+    padding-left: 30px;
+    margin-left: 58px;
+}
+
+
+.Bard{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #2F3336;
+  margin-top: 10px;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.buttonyu {
+  text-transform: capitalize;
+  padding: .7rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #1D9BF0; 
+  color: white;
+  font-size: 1rem;
+  width: 180px;
+
+  
+}
+.gettin{
+  display: flex;
+  gap: 3px;
+  background-color: #2F3336;
+  padding-left: 50px;
+  padding-right: 30px;
+  border-radius: 20px;
+}
+.classimput{
+  background-color: #2F3336;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  margin-left: -30px;
+}
+
+.gettin-two{
+    display: flex;
+    gap: 40px;
+    background-color: #2F3336;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 20px;
+    padding-bottom: 300px;
+    
+  }
+
+  .gettin-three{
+    display: flex;
+    gap: 9px;
+    background-color: #2F3336;
+    padding-left: 50px;
+    padding-right: 30px;
+    border-radius: 20px;
+    padding-bottom: 150px;
+  }
+
+  .thends-container{
+    
+    flex: 0 0 800px;
+    font-family: 'Inter', sans-serif;
+    border-left: 1px solid #2F3336;
+    border-right: 1px solid #2F3336; 
+    position: fixed;
+    padding-left: 70px;
+    padding-right: 60px;
+    margin-left: 990px;
+    margin-top: 20px;
+}
+
+/* css of trends */
+/* *{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    
+} */
+.trend{
+/* border: 1px solid white; */
+height: 70rem;
+width: 7rem;
+padding-left: 15rem;
+padding-right: 4rem;
+margin-left: 1rem;
+font-family: 'Inter', sans-serif;
+
+}
+.cont1{
+/* border: 1px solid white; */
+height: 3rem;
+width: 20rem;
+margin-left: -16rem;
+margin-top: 1rem;
+border-radius: 10rem;
+color: white;
+background-color: #131212;
+
+}
+.cont2{
+/* border: 1px solid white; */
+height: 20rem;
+width: 20rem;
+margin-left: -16rem;
+margin-top: 1rem;
+border-radius: 15px;
+padding-bottom: 21.5rem;
+color: white;
+background-color: #131212;
+}
+.cont3{
+/* border: 1px solid white; */
+height: 10rem;
+width: 20rem;
+margin-left: -16rem;
+margin-top: 1rem;
+border-radius: 15px;
+color: white;
+padding-bottom: 20.5rem;
+background-color: #131212;
+
+
+}
+.ekity{
+display: flex;
+margin-left: 1rem;
+gap: 15px;
+padding: 9px;
+color: #1D9BF0;
+
+}
+.ekity2{
+display: flex;
+margin-left: 1rem;
+justify-content: space-between;
+padding: 9px;
+margin-right: 1rem;
+
+}
+
+.in-cont{
+display: flex;
+}
+.ekity3{
+display: flex;
+gap: 6px;
+
+}
+.mol{
+display: flex;
+gap: 8px;
+}
+.eki-bd{
+display: flex;
+justify-content: space-between;
+margin-top: 28px;
+}
+.cont-title-down{
+margin-top: 10px;
+color: #1D9BF0;
+padding-left: 12px;
+}
+.cont-title{
+margin-top: 7px;
+padding-left: 12px;
+
+}
+.input-search{
+    border: none;
+    outline: none;
+    background-color: #131212;
+    color: white;
+}
+.follow{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+
+/* profilccccccccccccccccc */
+
+.headeroo {
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2F3336;
+    border: 1px solid white;
+}
+
+.tweetoo{
+    display: block;
+     border: 1px solid white;
+     padding-bottom: 20rem;
+    
+
+}
+
+.tweet-avataroo {
+    /*height: 70px;*/
+    /*width: 70px;*/
+    flex: 0 0 70px;
+
+    
+
+}
+
+.tweetar{
+    height: 150px;
+    border: 1px solid white;
+    margin-top: -50px;
+}
+.tweetard{
+    height: 200px;
+    border: 1px solid white;
+    
+
+
 }

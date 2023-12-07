@@ -129,7 +129,7 @@ function Tweet_Five() {
 
 
 // container 10 in 9
-function Tweet_Avatar() {
+export function Tweet_Avatar() {
     return (
        <div className="tweet-avatar">
         <Logo logo="src/images/twetIcone.png" />
@@ -137,6 +137,7 @@ function Tweet_Avatar() {
        </div>
     )
 }
+
 // container 11 in 9
 function Tweet_Content() {
     return (
@@ -222,7 +223,7 @@ function Action({picone , written}) {
     )
 }
 
-function BigImage({img}) {
+export function BigImage({img}) {
     return (
         <img className="tweet-image img" src={img} alt=""  />
     )
