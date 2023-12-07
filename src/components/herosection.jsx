@@ -1,8 +1,6 @@
 import React from "react";
 import Button from "./ButtonBlue";
 
-
-
 function HeroSection() {
     return (
 
