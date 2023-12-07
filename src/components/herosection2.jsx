@@ -31,9 +31,9 @@ function Tweet_one() {
           <Ecrit write="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio rem explicabo! Praesentium itaque cum at animi asperiores , ad deleniti consectetur quas. " />
 
         </div>
-        {/* <div className="tweet-actions">
-           <Tweet_Actions/>
-           </div> */}
+        <div className="tweet-actions">
+          <Tweet_Actions />
+        </div>
       </div>
 
     </div>
@@ -172,7 +172,7 @@ function Tweet_Actions() {
     <div className="tweet-actions">
       <Action picone="src/images/Reply.svg" written="19" />
       <Action picone="src/images/Retweet.svg" written="48" />
-      <Action picone="src/images/like.svg" written="482" />
+      <Action picone="src/images/Like.svg" written="482" />
       <Action picone="src/images/Downlord.svg" />
     </div>
   )
