@@ -181,7 +181,7 @@ function Tweet_Actions() {
 
 
 // container 14 in 12
-function Tweet_title({ titre, icone, details, text }) {
+export function Tweet_title({ titre, icone, details, text }) {
   return (
     <div className="tweet-title">
       <h4 className="tweet-title-author"> {titre} </h4>
@@ -216,7 +216,7 @@ function Logo({ logo }) {
   )
 }
 
-function Ecrit({ write }) {
+export function Ecrit({ write }) {
   return (
     <p className="tweet-text"> {write} </p>
   )

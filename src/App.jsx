@@ -1,8 +1,9 @@
- import Home from "./pages/home.jsx";
-// import Page_profil from "./pageprofil.jsx";
+//  import Home from "./pages/home.jsx";
+//  import Page_profil from "./pageprofil.jsx";
 import Layout from "./components/layout.jsx";
-import Sidebar from "./sidebar.jsx";
+import Sidebar from "./SIDEBAR_DOC/sidebar.jsx";
 import Trend from "./trends.jsx";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import('./style/reset.css');
 import('./style/App.css');
 
@@ -11,8 +12,8 @@ export default function App() {
     <Layout>
      
      <Sidebar/>
-     {/* <Page_profil/> */}
-     <Home/>
+      {/* <Page_profil/> */}
+      {/* <Home/> */}
      <Trend/>
      
      

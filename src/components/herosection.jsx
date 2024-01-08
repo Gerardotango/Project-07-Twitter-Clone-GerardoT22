@@ -1,11 +1,14 @@
 import React from "react";
 import Button from "./ButtonBlue";
-
+import { ImageAvat } from "./imageAvatar";
+import { Link } from "react-router-dom";
 function HeroSection() {
     return (
-
+       
         <div className="tweet-editor">
-            <Avatar img="src/images/profile.png" />
+            <Link to='/avatar'>
+            <Avatar/>
+            </Link>
             <TweetEditForm/>
         </div>
     )
@@ -15,11 +18,12 @@ function HeroSection() {
 
 export default HeroSection;
 
-function Avatar({img}) {
+ export function Avatar() {
     
     return (
         <div className="avatar">
-            <img src= {img} alt="" />
+            <ImageAvat img="./src/images/profile-photo.png"/>
+            
         </div>
     )
 }
@@ -66,7 +70,7 @@ function ActionTweet() {
 }
 // create component icones of contents 22
 
-function TweetEditActions({img}) {
+export function TweetEditActions({img}) {
     return (
         
           <img src= {img} alt="" />

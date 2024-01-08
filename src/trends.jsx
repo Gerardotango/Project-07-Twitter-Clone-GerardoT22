@@ -74,7 +74,7 @@ function Conttitle() {
    )
 }
 
-function Eki_bed({img,img2,texte1,text2}) {
+ export function Eki_bed({img,img2,texte1,text2}) {
    return (
       <div className="eki-bd">
          <div className="ekity3">
@@ -84,17 +84,17 @@ function Eki_bed({img,img2,texte1,text2}) {
             </div>
            <div className="mol">
              <div className="in-cont-2">
-                <h5> {texte1} </h5>
-                <h5> {text2} </h5>
+                <h4> {texte1} </h4>
+                <p> {text2} </p>
              </div>
              <div className="Gauche1">
                 <img src={img2} alt="" srcset="" />
              </div>
              
            </div>
-           <div className="b-droite">
+           {/* <div className="b-droite">
               <button className="follow">follow</button>
-       </div>
+       </div> */}
           </div>
          
        </div>
