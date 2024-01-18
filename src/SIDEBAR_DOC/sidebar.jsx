@@ -23,7 +23,7 @@ function Sidebar() {
        <div className="Sidebar">
         <div className="Allnav">
           <Link to='/boug'> <Bird/> </Link>
-          <Link style={{textDecorationLine:'none', color:'white'}} to='/'> <Containertwo/> </Link>
+          <Link style={{textDecorationLine:'none', color:'white'}} to='/'> <Containertwo img="src/images/Home-Fill.svg" texte="Home"/> </Link>
           
           <Containertree/>
           <Containerfour/>

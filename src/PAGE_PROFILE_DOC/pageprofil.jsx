@@ -1,7 +1,7 @@
-// import { Tweet_Avatar } from "./components/herosection2";
+//  import { Tweet_Avatar } from "./components/herosection2";
 
-import { Ecrit, Tweet_Avatar, Tweet_title } from "../components/herosection2"
-import { Eki_bed } from "../trends"
+//  import { Ecrit, Tweet_Avatar, Tweet_title } from "../components/herosection2"
+//  import { Eki_bed } from "../trends"
 import Info_date from "./Info_date"
 import Name_profil from "./Name_profil"
 import Navigate from "./Navigate"
