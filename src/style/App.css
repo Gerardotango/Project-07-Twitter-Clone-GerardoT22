@@ -89,10 +89,12 @@ body{
     justify-content: flex-start;
     /*padding: 0.8rem 0;*/
     gap: 1rem;
+    
 }
 .tweet-editor-actions button {
     background-color: transparent;
     border: none;
+    
 }
 .button {
     text-transform: capitalize;
@@ -179,22 +181,107 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     color: grey;
     font-size: 1rem;
+    
+    
+   
 }
-
-.tweet-actions svg {
+ 
+/* .tweet-actions svg {
     width: 1rem;
     height: auto;
     color: #2F3336;
-}
+    background-color: red;
+    border: 1px solid white;
+
+    
+}  */
+/* .good{
+    width: 1rem;
+    height: auto;
+    
+    background-color: red;
+} */
 
 .tweet-action{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;   
+}
+
+
+.controle1{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+}
+
+.controle1:hover{
+    background-color: #1d9cf03d;
+
+}
+.controle2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+}
+.controle2:hover{
+    background-color: rgba(0, 128, 0, 0.226);
+    
+}
+
+.controle3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    
+
+    
+}
+.controle3:hover svg path{
+   
+}
+.balise svg path{
+    stroke: #6E767D;
+    fill: none;
+}
+
+.controle3:hover{
+    background-color: rgba(255, 0, 0, 0.24);
+    stroke: red;
+    
+}
+
+.tweet-action:hover .value{
+    color: #1D9BF0;
+}
+
+.tweet-action:hover .paragraph .controle3 svg path{
+    color: red;
+    stroke: red;
+    fill: red;
+}
+.tweet-action:hover .paragh{
+    color: green;
+}
+
+ 
+
+.paragraph{
+    width: 3rem;
 }
 
 .time {
@@ -207,6 +294,8 @@ body{
     margin-left: 58px;
 }
 
+
+
 /* css of sidebar */
 *{
     margin: 0;
@@ -214,11 +303,14 @@ body{
     box-sizing: border-box;
 }
 
-
-.Sidebar{
+ .Sidebar{
     width: 21rem;
     height: 50rem;
+<<<<<<< HEAD
      /* border: 1px solid white;  */
+=======
+      /* border: 1px solid white;   */
+>>>>>>> f00fe96e32987dee63a7946d5372774ded2444c8
     display: flex;
     flex-direction: column;
     gap: 9rem;
@@ -235,7 +327,7 @@ body{
 .Allnav{
    width: 17rem;
    height: 27rem;
-    /* border: 1px solid white;   */
+     /* border: 1px solid white;    */
    display: flex;
    flex-direction: column;
    gap: 0.7rem;
@@ -246,7 +338,7 @@ body{
 .Profil{
     width: 19rem;
     height: 8rem;
-    /* border: 1px solid white; */
+    /* border: 1px solid white;  */
     display: flex;
     flex-direction: row;
     margin-top: -4.5rem;
@@ -254,14 +346,14 @@ body{
 }
 .proftwo{
     
-     /* border: 1px solid white;  */
+      /* border: 1px solid white;   */
      margin-top: 2rem;
      
     
     
 }
 .two{
-     /* border: 1px solid white;  */
+       /* border: 1px solid white;    */
     display: flex;
     gap: 23px; 
      padding-top: 0.3rem;
@@ -276,7 +368,7 @@ body{
 
 
 .tree{
-    /* border: 1px solid white;  */
+     /* border: 1px solid white;   */
     display: flex;
     gap: 23px;
     padding-top: 0.3rem;
@@ -289,12 +381,12 @@ body{
 }
 
 .four{
-     /* border: 1px solid white;  */
+      /* border: 1px solid white;  */
     display: flex;
     gap: 12px;
-    /* height: 2rem;
+    height: 2rem;
     padding-top: 8px;
-    border-radius: 2rem; */
+    border-radius: 2rem; 
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     border-radius: 1rem;
@@ -317,7 +409,7 @@ body{
     margin-left: -4px;
 }
 .five{
-     /* border: 1px solid white;  */
+      /* border: 1px solid white;   */
     display: flex;
     gap: 23px;
     padding-top: 0.3rem;
@@ -331,7 +423,7 @@ body{
 
 
 .six{
-     /* border: 1px solid white;  */
+     /* border: 1px solid white;   */
     display: flex;
     gap: 23px;
     padding-top: 0.3rem;
@@ -344,7 +436,7 @@ body{
 
 
 .seven{
-     /* border: 1px solid white;  */
+      /* border: 1px solid white;   */
     display: flex;
     gap: 23px;
     padding-top: 0.3rem;
@@ -357,7 +449,7 @@ body{
 
 
 .eight{
-     /* border: 1px solid white;  */
+      /* border: 1px solid white;   */
     display: flex;
     gap: 23px;
     padding-top: 0.3rem;
@@ -368,7 +460,7 @@ body{
     background-color: #171718;
 }
 .nine{
-     /* border: 1px solid white;  */
+     /* border: 1px solid white;   */
     display: flex;
     gap: 23px;
     padding-top: 0.3rem;
@@ -381,21 +473,23 @@ body{
 
 
 .ten{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     
 }
 .profone{
-  /* border: 1px solid white; */
+   /* border: 1px solid white;  */
   padding-left: 0rem;
 }
 .proftree{
-  /* border: 1px solid white; */
+   /* border: 1px solid white;  */
    margin-left: 2rem;
    margin-top: 2.5rem;
 }
 .double{
     display: flex;
-}
+} 
+
+
 
 /* fin css sidebar */
 
@@ -413,12 +507,12 @@ body{
 }
 
 /* css of trends */
-/* *{
+ /* *{
     background-color: black;
     margin: 0;
     padding: 0;
     
-} */
+}  */
 .trend{
 /* border: 1px solid white; */
 height: 70rem;
