@@ -223,10 +223,6 @@ body{
     border-radius: 50px;
 }
 
-.controle1:hover{
-    background-color: #1d9cf03d;
-
-}
 .controle2{
     display: flex;
     justify-content: center;
@@ -235,10 +231,6 @@ body{
     height: 2rem;
     border-radius: 50px;
 }
-.controle2:hover{
-    background-color: rgba(0, 128, 0, 0.226);
-    
-}
 
 .controle3{
     display: flex;
@@ -246,38 +238,71 @@ body{
     align-items: center;
     width: 2rem;
     height: 2rem;
-    border-radius: 50px;
-    
-
-    
+    border-radius: 50px;   
 }
-.controle3:hover svg path{
-   
-}
-.balise svg path{
-    stroke: #6E767D;
-    fill: none;
-}
-
-.controle3:hover{
-    background-color: rgba(255, 0, 0, 0.24);
-    stroke: red;
-    
-}
-
-.tweet-action:hover .value{
+/* .image-container {
+    display: inline-block;
+    border-radius: 50%;
+    transition: border-radius 0.3s, background-color 0.3s;
+  } */
+  
+  .tweet-action:hover .controle1{
+    background-color: #1d9cf025;
+  }
+  
+  .tweet-action:hover .controle1 svg,
+  .tweet-action:hover p {
+    stroke: #1D9BF0;
+  }
+  
+  .tweet-action p {
+    display: inline-block;
+    margin-left: 10px;
+    transition: color 0.3s;
+  }
+  
+  .tweet-action:hover p {
     color: #1D9BF0;
-}
+  }
 
-.tweet-action:hover .paragraph .controle3 svg path{
-    color: red;
-    stroke: red;
-    fill: red;
-}
-.tweet-action:hover .paragh{
+  .tweet-action:hover .controle2{
+    background-color: rgba(0, 128, 0, 0.24);
+  }
+  
+  .tweet-action:hover .controle2 svg,
+  .tweet-action:hover .paragh {
+    stroke: green;
+  }
+  
+  .tweet-action .paragh {
+    display: inline-block;
+    margin-left: 10px;
+    transition: color 0.3s;
+  }
+  
+  .tweet-action:hover .paragh {
     color: green;
-}
+  }
 
+  .tweet-action:hover .controle3{
+    background-color: rgba(255, 0, 0, 0.24);
+  }
+  
+  .tweet-action:hover .controle3 svg,
+  .tweet-action:hover .paragraph {
+    /* stroke: red;  */
+    /* fill: red; */
+  }
+  
+  .tweet-action .paragraph {
+    display: inline-block;
+    margin-left: 10px;
+    transition: color 0.3s;
+  }
+  
+  .tweet-action:hover .paragraph {
+    color: red;
+  }
  
 
 .paragraph{

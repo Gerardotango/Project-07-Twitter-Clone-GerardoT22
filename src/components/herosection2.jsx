@@ -30,16 +30,18 @@ function Herosection2() {
 
 // le premier container 9
 function Tweet_one({ img, titre, icone, details, write, imagepost, picone1, picone2, picone3, picone4, written1, written2, written3 }) {
-
+  
   const [icon, setIcon] = useState(false)
   const [count, setCount] = useState(written3);
   
 
   const handlClick = () => {
-    if (!icon) {
+    if (!icon ) {
       setCount(count + 1)
+      
     } else {
       setCount(count - 1)
+      
     }
     return (
       setIcon(!icon)
@@ -87,8 +89,8 @@ function Tweet_one({ img, titre, icone, details, write, imagepost, picone1, pico
             <p className="paragh"> {written2} </p>
             </div>
            <div className="tweet-action">
-            <div className={`controle3 ${icone? "balise" : ""} `}> 
-            <svg onClick={()=> handlClick()} xmlns="http://www.w3.org/2000/svg" fill="red"  width="30" height="20" viewBox="0 0 24 24" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="arcs">
+            <div className="controle3"> 
+            <svg onClick={()=> handlClick()} xmlns="http://www.w3.org/2000/svg" fill={icon ? 'red' : 'none'}  width="30" height="20" viewBox="0 0 24 24" stroke={icon ? 'red' : 'gray'} stroke-width="2" stroke-linecap="round" stroke-linejoin="arcs">
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C16.09 3.81 17.76 3 19.5 3 22.58 3 25 5.42 25 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
       </svg>
           </div>
