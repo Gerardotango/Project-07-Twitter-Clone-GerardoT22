@@ -12,19 +12,8 @@ export default function App() {
     <Layout>
      
      <Sidebar/>
-      {/* <Page_profil/> */}
-      {/* <Home/> */}
+     
      <Trend/>
-     
-     
-     
-     
-       
-      
-      
-      
-
-      
 
     </Layout>
   );
