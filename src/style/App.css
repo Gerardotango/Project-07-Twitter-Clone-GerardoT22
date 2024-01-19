@@ -218,7 +218,7 @@ body{
 .Sidebar{
     width: 21rem;
     height: 50rem;
-     border: 1px solid white; 
+     /* border: 1px solid white;  */
     display: flex;
     flex-direction: column;
     gap: 9rem;
