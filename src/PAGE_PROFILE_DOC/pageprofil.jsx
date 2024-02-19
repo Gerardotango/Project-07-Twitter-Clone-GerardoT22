@@ -2,6 +2,7 @@
 
 //  import { Ecrit, Tweet_Avatar, Tweet_title } from "../components/herosection2"
 //  import { Eki_bed } from "../trends"
+import { useContext } from "react"
 import Info_date from "./Info_date"
 import Name_profil from "./Name_profil"
 import Navigate from "./Navigate"
@@ -10,6 +11,7 @@ import Section from "./Page_profile_two"
 import Profileheader from "./Profile_header"
 import Cont_abonnement from "./cont_abonnement"
 import Section_three from "./cont_profile_edit"
+import { Mycontexte } from "../components/Mycontexte"
 
 
 
@@ -21,11 +23,11 @@ export default function Page_profil() {
               <Profileheader/>
               <Section/>
               <Section_two/>
-              <Section_three/>
-              <Name_profil/>
+              {/* <Section_three/> */}
+              {/* <Name_profil/> */}
               <Info_date/>
               <Cont_abonnement/>
-              <Navigate/>
+              <Navigate/>        
             </div>
     )
 }

@@ -300,7 +300,7 @@ body{
     transition: color 0.3s;
   }
   
-  .tweet-action:hover .paragraph {
+  .tweet-action:hover .Likered {
     color: red;
   }
  

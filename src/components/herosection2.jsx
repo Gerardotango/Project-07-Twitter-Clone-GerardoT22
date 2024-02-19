@@ -1,27 +1,17 @@
 import React from "react";
+import { useContext } from "react";
 import { useState } from "react";
+import { Mycontexte } from "./Mycontexte";
+import { data } from "./My_data";
+import { Avatar, TweetEditForm } from "./herosection";
 
 function Herosection2() {
 
 
   return (
     <div className="tweets">
-      {data.map(tweets =>
-        <Tweet_one
-          img={tweets.profile}
-          titre={tweets.tweetTitle}
-          icone={tweets.iconeTitle}
-          details={tweets.pseudo}
-          write={tweets.texte}
-          imagepost={tweets.postimage}
-          // picone1={tweets.Reply}
-          written1={tweets.comment}
-          // picone2={tweets.Retweet}
-          written2={tweets.retweet}
-          // picone3={tweets.Like}
-          written3={tweets.like}
-          picone4={tweets.Downlord}
-        />)}
+      
+        <Tweet_one/>
 
     </div>
   )
@@ -29,18 +19,58 @@ function Herosection2() {
 
 
 // le premier container 9
-function Tweet_one({ img, titre, icone, details, write, imagepost, picone1, picone2, picone3, picone4, written1, written2, written3 }) {
-  
-  const [icon, setIcon] = useState(false)
-  const [count, setCount] = useState(written3);
-  
+function Tweet_one() {
+  const Mapdata = useContext(Mycontexte)
+  const [InputChange, setImputchange] = useState('');
+  const bigdata = useContext(Mycontexte)
+  const [Tweety , setTweet] = useState(bigdata)
 
+  const handleImputChange = (event) =>{
+   setImputchange(event.target.value)
+   }
+   const Addnew = (newTweet) =>{
+       setTweet([newTweet, ...Tweety])
+   }
+
+   const handlClicks = () =>{
+    if (InputChange.trim() !== '' && InputChange.trim().length > 0){
+       const newdata = {
+           id: 1,
+          author: "gerardo",
+          profile: "src/images/profile.png",
+           profileTweet: "src/images/cnn.svg",
+          texte: InputChange,
+           //  postimage : "src/images/tweet-image.png",
+           tweetTitle: "Gerardo Tango",
+           iconeTitle: "src/images/Group.svg",
+          pseudo: "@Twitter . Oct 29",
+          comment: 0,
+          like: 0,
+          retweet: 0,
+          Reply: "src/images/Reply.svg",
+          Retweet: "src/images/Retweet.svg",
+          // Like: "src/images/Like.svg",
+          Downlord: "src/images/Downlord.svg"
+     
+        }
+        Addnew(newdata);
+        setImputchange('')
+      }
+   }
+
+  const Like = ({nombre}) =>{
+    const [Liike , setLiike] = useState(nombre)
+    const [icon, setIcon] = useState(false)
+
+    
+    
+    
   const handlClick = () => {
     if (!icon ) {
-      setCount(count + 1)
+      setLiike(Liike + 1)
       
     } else {
-      setCount(count - 1)
+      setLiike(Liike - 1)
       
     }
     return (
@@ -49,23 +79,43 @@ function Tweet_one({ img, titre, icone, details, write, imagepost, picone1, pico
 
   }
 
+    return (
+      <>
+      <div className="controle3"> 
+            <svg onClick={()=> handlClick()} xmlns="http://www.w3.org/2000/svg" fill={icon ? 'red' : 'none'}  width="30" height="20" viewBox="0 0 24 24" stroke={icon ? 'red' : 'gray'} stroke-width="2" stroke-linecap="round" stroke-linejoin="arcs">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C16.09 3.81 17.76 3 19.5 3 22.58 3 25 5.42 25 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+          </div>
+      <p className="Likered"> {Liike} </p>
+      </>
+    )
+  }
+
 
   return (
+    <>
+    <div className="tweet-editor">
+      <Avatar/>
+    <TweetEditForm value={InputChange} change={handleImputChange} setclik={handlClicks}/>
+    </div>
+    {Tweety.map(Datas => (
+    
+    
     <div className="tweet">
       <div className="tweet-avatar">
-        <img className="tweet-avatar img" src={img} alt="" />
+        <img className="tweet-avatar img" src={Datas.profile} alt="" />
       </div>
 
-      <div className="tweet-content">
+       <div className="tweet-content">
         <div className="tweet-body">
           <div className="tweet-title">
-            <h4 className="tweet-title-author"> {titre} </h4>
-            <img className="tweet-title svg" src={icone} alt="" />
-            <p className="tweet-title-details"> {details} </p>
+            <h4 className="tweet-title-author"> {Datas.tweetTitle} </h4>
+            <img className="tweet-title svg" src={Datas.iconeTitle} alt="" />
+            <p className="tweet-title-details"> {Datas.pseudo} </p>
           </div>
-          <p className="tweet-text"> {write} </p>
+          <p className="tweet-text"> {Datas. texte} </p>
           <div className="tweet-image">
-            <img className="" src={imagepost} alt="" />
+            <img className="" src={Datas.postimage} alt="" />
           </div>
         </div>
         <div className="tweet-actions">
@@ -77,7 +127,7 @@ function Tweet_one({ img, titre, icone, details, write, imagepost, picone1, pico
           </svg>
           </div>
 
-            <p className="value"> {written1} </p>
+            <p className="value"> {Datas.comment} </p>
             </div>
             <div className="tweet-action">
               <div className="controle2">
@@ -86,197 +136,21 @@ function Tweet_one({ img, titre, icone, details, write, imagepost, picone1, pico
             </svg>
             </div>
 
-            <p className="paragh"> {written2} </p>
+            <p className="paragh"> {Datas.retweet} </p>
             </div>
            <div className="tweet-action">
-            <div className="controle3"> 
-            <svg onClick={()=> handlClick()} xmlns="http://www.w3.org/2000/svg" fill={icon ? 'red' : 'none'}  width="30" height="20" viewBox="0 0 24 24" stroke={icon ? 'red' : 'gray'} stroke-width="2" stroke-linecap="round" stroke-linejoin="arcs">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C16.09 3.81 17.76 3 19.5 3 22.58 3 25 5.42 25 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-      </svg>
-          </div>
-            <p className="paragraph"> {count} </p>
+            <Like nombre={Datas.like}/>
             </div>
-            <img className="tweet-actions svg" src={picone4} alt="" />
+            <img className="tweet-actions svg" src={Datas.Downlord} alt="" />
           </div>
         </div>
       </div>
-    
+      ))}
+      </>
   )
 }
 // Tableau d'objet
-export const data = [
-  {
-    id: 1,
-    author: "gerardo",
-    profile: "src/images/cnn.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    //  postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 10,
-    like: 22,
-    retweet: 19,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-    // Like: "src/images/Like.svg",
-    Downlord: "src/images/Downlord.svg"
 
-  },
-  {
-    id: 2,
-    author: "gerardo",
-    profile: "src/images/time.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    postimage: "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 25,
-    like: 23,
-    retweet: 45,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-   
-    Downlord: "src/images/Downlord.svg"
-
-  },
-  {
-    id: 3,
-    author: "gerardo",
-    profile: "src/images/twitter.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    // postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 63,
-    like: 220,
-    retweet: 6,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-
-    Downlord: "src/images/Downlord.svg"
-
-  },
-  {
-    id: 4,
-    author: "gerardo",
-    profile: "src/images/twitter.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    // postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 99,
-    like: 106,
-    retweet: 3,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-    Like: "src/images/Like.svg",
-    Downlord: "src/images/Downlord.svg"
-
-  },
-  {
-    id: 5,
-    author: "gerardo",
-    profile: "src/images/twitter.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    // postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 205,
-    like: 22,
-    retweet: 40,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-    
-    Downlord: "src/images/Downlord.svg"
-
-  },
-  {
-    id: 6,
-    author: "gerardo",
-    profile: "src/images/twitter.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    // postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 0,
-    like: 150,
-    retweet: 20,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-    
-    Downlord: "src/images/Downlord.svg"
-
-  },
-  {
-    id: 7,
-    author: "gerardo",
-    profile: "src/images/twitter.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    // postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 65,
-    like: 0,
-    retweet: 1,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-    
-    Downlord: "src/images/Downlord.svg"
-
-  },
-  {
-    id: 8,
-    author: "gerardo",
-    profile: "src/images/twitter.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    // postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 50,
-    like: 6,
-    retweet: 539,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-    
-    Downlord: "src/images/Downlord.svg"
-
-  },
-  {
-    id: 9,
-    author: "gerardo",
-    profile: "src/images/twitter.svg",
-    profileTweet: "src/images/cnn.svg",
-    texte: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    // postimage : "src/images/tweet-image.png",
-    tweetTitle: "The New York Times",
-    iconeTitle: "src/images/Group.svg",
-    pseudo: "@Twitter . Oct 29",
-    comment: 10,
-    like: 22,
-    retweet: 1,
-    Reply: "src/images/Reply.svg",
-    Retweet: "src/images/Retweet.svg",
-    
-    Downlord: "src/images/Downlord.svg"
-  },
-  
-]
 export default Herosection2;
 
 

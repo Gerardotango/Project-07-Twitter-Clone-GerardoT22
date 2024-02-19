@@ -28,34 +28,21 @@ export default HeroSection;
     )
 }
 // containeur 8
- function TweetEditForm() {
+ export function TweetEditForm({value, change, setclik}) {
 
     return (
         <div className="tweet-editor-form">
-            <TweetEditImput/>
-            <TweetEditbuttons/>
-        </div>
-    )
-}
-// first content of containeur 8
-
- function TweetEditImput() {
-
-    return (
-        <input className="tweet-editor-input" type="text" placeholder="What's happening?" />
-    )
-}
-// second content 21 of containeur 8 
-
-function TweetEditbuttons() {
-    return (
-        <div className="tweet-editor-buttons">
+             <input className="tweet-editor-input" type="text" placeholder="What's happening?"  value={value} onChange={change}/>
+             <div className="tweet-editor-buttons">
              <ActionTweet/>
-             <Button style="button"/>
+             <button className="button" onClick={setclik}>
+             Twitter
+         </button>
+             </div>
         </div>
-
     )
 }
+
 // contents 22
 function ActionTweet() {
     return (
@@ -78,17 +65,4 @@ export function TweetEditActions({img}) {
     )
 }
 
-// create button element for containeur 21
-
-// function Button({childreen}) {
-//     return (
-//         <button className="button">
-//             twitter
-//         </button>
-    
-//     )
-// }
-
-
-
-
+ 
